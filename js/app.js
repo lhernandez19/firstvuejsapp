@@ -3,38 +3,18 @@ const app = new Vue({
 
     data: function(){
         return {
-            newEmployee: {
-                firstName: '',
-                lastName: '',
-                position: '',
-                email: '',
-                status: true,
-            },
-
             employeeList: [
                 {firstName: 'John', lastName: 'Smith', position: 'Manager', email: 'john.smith@wctc.com', status: true},
                 {firstName: 'Mary', lastName: 'Wolf', position: 'Director', email: 'mary.wolf@wctc.com', status: true},
                 {firstName: 'Luke', lastName: 'Fox', position: 'President', email: 'luke.fox@wctc.com', status: true}
             ],
-
-
         }
     },
 
     methods:{
-        addEmployee: function(){
-            this.employeeList.push(this.newEmployee);
-
-            this.newEmployee = {
-                firstName: '',
-                lastName: '',
-                position: '',
-                email: '',
-                status: true,
-
-            };
+        addEmployee: function(newEmployee){
+            this.employeeList.push(employeeList);
         },
-
 
         removeIt(item){
             this.employeeList.splice(this.employeeList.indexOf(item), 1);

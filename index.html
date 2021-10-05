@@ -33,7 +33,10 @@
 
 			<!-- Form -->
 
-            <form class="container bg-light text-dark my-3 py-3 rounded">
+			<my-form v-on:add-method-employee="addEmployee"></my-form>
+
+			
+            <!-- <form class="container bg-light text-dark my-3 py-3 rounded">
                 <div class="form-row">
                   <div class="col-md-6 mb-3">
                     <label for="firstName">First name</label>
@@ -66,7 +69,7 @@
                   </div>
                 </div>
                 <button class="btn btn-primary" type="submit" @click.prevent="addEmployee" >Submit form</button>
-            </form>
+            </form> -->
 
 			<!-- List -->
 
@@ -75,11 +78,11 @@
 				v-bind:items="activeList"
                 v-on:remove-item="removeIt"
 			></listcontainer>
-			<listcontainer
+			<!-- <listcontainer
 				name="Inactive employees"
 				v-bind:items="inactiveList"
                 v-on:remove-item="removeIt"
-			></listcontainer>
+			></listcontainer> -->
 
 
 			<!-- Footer -->
